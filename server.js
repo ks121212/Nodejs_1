@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
-                                                              
+
 const outputFolder = "./output"; //Folder name where files will be stored
 
 //To check whether folder is alreadt there, if not create a new folder
@@ -13,8 +13,8 @@ if (!fs.existsSync(outputFolder)) {
 
 const PORT = 3001;
 
-app.get("/", (req,res) => {
-  res.status(200).json({message:"Api Started Successfully"});
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Api Started Successfully" });
 });
 
 app.get("/createFile", (req, res) => {
