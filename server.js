@@ -13,6 +13,10 @@ if (!fs.existsSync(outputFolder)) {
 
 const PORT = 3001;
 
+app.get("/", (req,res) => {
+  res.status(200).json({message:"Api Started Successfully"});
+});
+
 app.get("/createFile", (req, res) => {
   const currentTime = new Date();
   const year = currentTime.getFullYear().toString();
